@@ -1,3 +1,12 @@
+"""
+Projeto de automação web desenvolvido exclusivamente para fins educacionais.
+
+A URL utilizada neste projeto pertence à empresa Hashtag Treinamentos e é usada
+apenas como ambiente de estudo e demonstração de automação com Selenium.
+
+O login do site fornecido pela plataforma é fictício, logo, as credenciais presentes no código são exemplares para fins de aprendizado.
+"""
+
 from utils.driver_factory import criar_driver
 from utils.csv_reader import ler_produtos
 from utils.logger import configurar_logger
@@ -6,9 +15,9 @@ from pages.cadastro_page import CadastroPage
 import os
 
 
-URL = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
-EMAIL = "automation.example@gmail.com"
-SENHA = "example123"
+URL_ESTUDO = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
+EMAIL_EXEMPLO = "automation.example@gmail.com"
+SENHA_EXEMPLO = "example123"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(BASE_DIR, "data", "produtos.csv")
 
@@ -22,8 +31,8 @@ def main():
         login_page = LoginPage(driver)
         cadastro_page = CadastroPage(driver)
 
-        login_page.acessar(URL)
-        login_page.fazer_login(EMAIL, SENHA)
+        login_page.acessar(URL_ESTUDO)
+        login_page.fazer_login(EMAIL_EXEMPLO, SENHA_EXEMPLO)
 
         produtos = ler_produtos(CSV_PATH)
         logger.info(f"{len(produtos)} produtos encontrados")
