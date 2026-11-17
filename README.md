@@ -43,4 +43,4 @@ Requer Chrome e ChromeDriver compatíveis (Selenium 4.39).
 
 ## Licença
 
-MIT — ver [LICENSE](LICENSE).
+Apache License 2.0 — ver [LICENSE](LICENSE).
